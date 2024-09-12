@@ -1,12 +1,9 @@
 version: 1.0
 runtime: python3
 build:
-  env:
-    - name: OPENAI_API_KEY
-      value: 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
-      
   commands:
     build:
+      - export OPENAI_API_KEY="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"
       - yum update -y
       - yum install -y unzip
       - curl -sL https://rpm.nodesource.com/setup_16.x | bash -
