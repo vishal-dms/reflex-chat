@@ -6,6 +6,8 @@ build:
       - pip install -r requirements.txt
       - pip install reflex
 run:
+  pre-run:
+    - reflex init
   command: reflex run --env prod
   network:
     port: 3000
