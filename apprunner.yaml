@@ -2,12 +2,17 @@ version: 1.0
 runtime: python3
 build:
   commands:
-    build:
-      - pip install -r requirements.txt
-      - pip install reflex
-run:
-  pre-run:
+    - yum update -y
+    - yum install -y unzip
+    - curl -sL https://rpm.nodesource.com/setup_16.x | bash -
+    - yum install -y nodejs
+    - node --version
+    - npm --version
+    - pip install -r requirements.txt
+    - pip install reflex
     - reflex init
+    - reflex export --frontend-only
+run:
   command: reflex run --env prod
   network:
     port: 3000
