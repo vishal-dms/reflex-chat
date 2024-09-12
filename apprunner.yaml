@@ -6,6 +6,6 @@ build:
       - pip install -r requirements.txt
       - pip install reflex
 run:
-  command: reflex run --env prod --backend-only
+  command: reflex run --env prod
   network:
     port: 3000
