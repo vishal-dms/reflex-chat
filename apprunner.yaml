@@ -2,9 +2,9 @@ version: 1.0
 runtime: python3
 build:
   commands:
-      - pip install -r requirements.txt
-      - pip install reflex
+    - pip install -r requirements.txt
+    - pip install reflex
 run:
   command: reflex run --env prod --backend-only
-    network:
-        port: 3000
+  network:
+    port: 3000
